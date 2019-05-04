@@ -1,0 +1,40 @@
+#include<iostream>
+	using namespace std;
+
+
+	int main()
+	{
+	    	int p;
+		int hours;
+		
+cout<<"What package did you purchased? (1-PackageA; 2-PackageB; 3-PackageC)? ";
+		cin>>p;
+		cout<<"How many hours did you use this month? ";
+		cin>>hours;
+		
+		switch(p)
+		{ 
+		    case 1:
+		    if (hours>0 && hours<=10)
+		    cout<< "Package A: Php 995 is your monthly due";
+		    else if (hours>10)
+		    cout<< "Package A: Php " << (((hours-10)*20) + 995) << " is your monthly due";
+		    break;
+		    
+		    case 2:
+		    if (hours>0 && hours<=20)
+		    cout<< "Package B: Php 1495 is your monthly due";
+		    else if (hours>20)
+        cout<< "Package B: Php " << (((hours-20)*10) + 1495) << " is your monthly due";
+		    break;
+		    
+		    case 3:
+		    cout<<"Package C: Php 1995 is your monthly due";
+		    break;
+		    
+		    default:
+		    cout<<"Enter a valid package!";
+		    break;
+		}
+		    return 0;
+		}
